@@ -27,6 +27,17 @@ a{color:inherit}
 #buscar:focus{outline:none;border-color:#a855f7;box-shadow:0 0 0 1px #a855f7}
 @media (min-width:640px){.brsm{display:inline}}
 @media (max-width:760px){.nav{order:3;width:100%;justify-content:space-between;gap:8px !important;font-size:13px !important;border-top:1px solid rgba(255,255,255,0.07)}.nav a{min-height:44px}.nav svg{display:none}.feat{grid-template-columns:1fr}.ptable{min-width:0 !important}.ptable,.ptable tbody{display:block}.ptable thead{display:none}.row{display:grid !important;grid-template-columns:1fr auto;align-items:center;padding:14px 0;row-gap:4px}.row td{display:block;padding:2px 16px !important}.row td:nth-child(1){grid-column:1;grid-row:1}.row td:nth-child(5){grid-column:2;grid-row:1}.row td:nth-child(2){grid-column:1 / -1;grid-row:2}.row td:nth-child(3){grid-column:1 / -1;grid-row:3}.row td:nth-child(4){grid-column:1 / -1;grid-row:4}}
+.faq-item{border-top:1px solid rgba(31,41,55,0.8)}
+.faq-item:first-child{border-top:0}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 24px;box-sizing:border-box;font-size:16px;font-weight:700;color:#ffffff}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{background:rgba(88,28,135,0.1)}
+.faq-item summary:focus-visible{outline:2px solid #a855f7;outline-offset:-2px}
+.faq-chev{flex:none;color:#c084fc;transition:transform .25s}
+.faq-item[open] .faq-chev{transform:rotate(180deg)}
+.faq-item[open] summary{color:#e9d5ff}
+.faq-answer{margin:0;padding:0 24px 22px;max-width:760px;font-size:15px;line-height:1.65;color:#d1d5db}
+@media (prefers-reduced-motion:reduce){.faq-chev{transition:none}}
 </style>
 
 </head>
@@ -41,7 +52,7 @@ a{color:inherit}
       </a>
       <nav class="nav" aria-label="Secciones" style="align-items:center;gap:32px;font-size:14px;font-weight:500;color:#d1d5db">
         <a href="#precios" style="display:flex;align-items:center;gap:6px;text-decoration:none;color:inherit"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#a855f7;"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 9h.01M11 9h6M7 13h.01M11 13h6M7 17h.01M11 17h6"></path></svg><span>Lista de Precios</span></a>
-        <a href="#ventajas" style="display:flex;align-items:center;gap:6px;text-decoration:none;color:inherit"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#a855f7;"><rect x="6" y="6" width="12" height="12" rx="1"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"></path></svg><span>Especialidades</span></a>
+        <a href="#faq" style="display:flex;align-items:center;gap:6px;text-decoration:none;color:inherit"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#a855f7;"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.2a2.6 2.6 0 1 1 3.6 2.4c-.7.4-1.1 1-1.1 1.8"></path><path d="M12 17h.01"></path></svg><span>Preguntas Frecuentes</span></a>
         <a href="#horarios" style="display:flex;align-items:center;gap:6px;text-decoration:none;color:inherit"><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;color:#a855f7;"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span>Horarios</span></a>
       </nav>
       <a class="cta" href="https://wa.link/gg22as" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:12px;background:linear-gradient(90deg,#9333ea,#4f46e5);color:#ffffff;font-size:12px;font-weight:700;text-decoration:none;box-shadow:0 10px 15px -3px rgba(76,29,149,0.4)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="flex:none;color:#4ade80;margin-right:8px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg><span>Atención al Cliente</span></a>
@@ -125,6 +136,14 @@ a{color:inherit}
     </div>
   </section>
 
+  <section id="faq" style="width:100%;box-sizing:border-box;max-width:1280px;margin:0 auto;padding:48px 24px;scroll-margin-top:80px">
+    <div style="margin-bottom:32px">
+      <h2 style="margin:0;font-size:30px;font-weight:800;letter-spacing:-0.025em;color:#ffffff">Preguntas Frecuentes</h2>
+      <p style="margin:4px 0 0;font-size:14px;color:#9ca3af">Respuestas rápidas sobre pantallas, plazos y garantía.</p>
+    </div>
+    <div id="faq-list" class="glass-card" style="border-radius:16px;overflow:hidden;box-shadow:0 25px 50px -12px rgba(0,0,0,0.5);border:1px solid rgba(31,41,55,0.8)"></div>
+  </section>
+
   <section id="horarios" style="margin:32px 0;padding:48px 0;background:rgba(3,7,18,0.6);border-top:1px solid #111827;border-bottom:1px solid #111827">
     <div style="max-width:1280px;margin:0 auto;padding:0 24px">
       <div class="glass-card glow-purple" style="padding:32px;border-radius:16px;border:1px solid rgba(59,7,100,0.3);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
@@ -150,6 +169,31 @@ a{color:inherit}
 </div>
 
 <script>
+const FAQ_DATA = [
+  {"q": "¿Cuál es la diferencia entre las pantallas Hard OLED y Soft OLED?", "a": "Las pantallas Hard OLED utilizan la misma tecnología que la original, pero con un panel más rígido. Las Soft OLED tienen la misma flexibilidad que las originales."},
+  {"q": "¿Cuál es el tiempo estimado de las reparaciones?", "a": "Siempre que contemos con el repuesto, las reparaciones se realizan en el día. Si el repuesto no está disponible, la reparación demora entre 24 y 48 horas."},
+  {"q": "¿Las reparaciones tienen garantía?", "a": "Sí. Todas nuestras reparaciones incluyen una garantía escrita sobre el trabajo realizado, de entre 30 y 90 días según el tipo de reparación."},
+  {"q": "¿Qué marca de Baterias utilizan?", "a": "Para los cambios de bateria utilizamos la marca Ampsentrix, siendo una marca certificada y de las más recomendadas"}
+];
+(function renderFaq() {
+  const list = document.getElementById('faq-list');
+  if (!list) return;
+  FAQ_DATA.forEach((f) => {
+    const d = document.createElement('details');
+    d.className = 'faq-item';
+    const sm = document.createElement('summary');
+    const t = document.createElement('span');
+    t.textContent = f.q;
+    sm.appendChild(t);
+    sm.insertAdjacentHTML('beforeend', '<svg class="faq-chev" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>');
+    const p = document.createElement('p');
+    p.className = 'faq-answer';
+    p.textContent = f.a;
+    d.appendChild(sm);
+    d.appendChild(p);
+    list.appendChild(d);
+  });
+})();
 const PRICE_DATA = [
   // ── COMO RELLENAR Y NO SER WACHIN ──
   // {"cat": "PIN_CARGA", "modelo": "iPhone 12", "detalle": "", "obs": "", "precio": "VALOR"},
@@ -239,54 +283,12 @@ const PRICE_DATA = [
   {"cat": "TAPAS", "modelo": "iPhone 16 Pro", "detalle": "Tapa Trasera Cristal", "obs": "Plazo de 24/48hs", "precio": "$170.000"},
   {"cat": "TAPAS", "modelo": "iPhone 16 Pro Max", "detalle": "Tapa Trasera Cristal", "obs": "Plazo de 24/48hs", "precio": "$170.000"},
   {"cat": "TAPAS", "modelo": "iPhone 17", "detalle": "Tapa Trasera Cristal", "obs": "Plazo de 24/48hs", "precio": "$160.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 7", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$45.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 7 Plus", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$45.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 8", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$45.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 8 Plus", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$45.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone X", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$49.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone XR", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$55.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone XS", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$55.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone XS Max", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$55.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 11", "detalle": "Flex de Carga ", "obs": "Calidad Original", "precio": "$75.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 11 Pro", "detalle": "Flex de Carga ", "obs": "Calidad Original", "precio": "$85.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 11 Pro Max", "detalle": "Flex de Carga ", "obs": "Calidad Original", "precio": "$85.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 12/12 Pro", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$85.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 12 Pro Max", "detalle": "Flex de Carga ", "obs": "Calidad Original", "precio": "$90.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 13", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$90.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 13 Pro", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$90.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 13 Pro Max", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$95.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 14", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$90.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 14 Pro", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$120.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 14 Pro Max", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$129.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 15", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$135.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 15 Pro", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$140.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 15 Pro Max", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$145.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 16", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$150.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 16 Pro", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$150.000"},
-  {"cat": "PIN DE CARGA", "modelo": "iPhone 16 Pro Max", "detalle": "Flex de Carga", "obs": "Calidad Original", "precio": "$150.000"},
-  {"cat": "PLACA", "modelo": "iPhone 11", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles ", "precio": "$120.000"},
-  {"cat": "PLACA", "modelo": "iPhone 11 Pro", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$120.000"},
-  {"cat": "PLACA", "modelo": "iPhone 11 Pro Max", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$120.000"},
-  {"cat": "PLACA", "modelo": "iPhone 12/12 Pro", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$140.000"},
-  {"cat": "PLACA", "modelo": "iPhone 12 Pro Max", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$140.000"},
-  {"cat": "PLACA", "modelo": "iPhone 13", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$168.000"},
-  {"cat": "PLACA", "modelo": "iPhone 13 Pro", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$230.000"},
-  {"cat": "PLACA", "modelo": "iPhone 13 Pro Max", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$230.000"},
-  {"cat": "PLACA", "modelo": "iPhone 14", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$190.000"},
-  {"cat": "PLACA", "modelo": "iPhone 14 Pro", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$275.000"},
-  {"cat": "PLACA", "modelo": "iPhone 14 Pro Max", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$275.000"},
-  {"cat": "PLACA", "modelo": "iPhone 15", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$275.000"},
-  {"cat": "PLACA", "modelo": "iPhone 15 Pro", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$355.000"},
-  {"cat": "PLACA", "modelo": "iPhone 15 Pro Max", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$355.000"},
-  {"cat": "PLACA", "modelo": "iPhone 16", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$355.000"},
-  {"cat": "PLACA", "modelo": "iPhone 16 Pro", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$430.000"},
-  {"cat": "PLACA", "modelo": "iPhone 16 Pro Max", "detalle": "Reparacion de Placa", "obs": "Tiempo Estimado 10d Hábiles", "precio": "$430.000"},
 ];
 const BADGES = {
   BATERIAS: 'background:rgba(59,7,100,0.8);color:#d8b4fe;border:1px solid rgba(107,33,168,0.8)',
   PANTALLAS: 'background:rgba(23,37,84,0.8);color:#93c5fd;border:1px solid rgba(30,64,175,0.8)',
   TAPAS: 'background:rgba(2,44,34,0.8);color:#6ee7b7;border:1px solid rgba(6,95,70,0.8)',
-  'PIN DE CARGA': 'background:rgba(69,26,3,0.8);color:#fcd34d;border:1px solid rgba(146,64,14,0.8)',
+  PIN_CARGA: 'background:rgba(69,26,3,0.8);color:#fcd34d;border:1px solid rgba(146,64,14,0.8)',
   PLACA: 'background:rgba(76,5,25,0.8);color:#fda4af;border:1px solid rgba(159,18,57,0.8)'
 };
 
@@ -295,7 +297,7 @@ const TABS = [
   { id: 'BATERIAS', label: 'Baterías iPhone' },
   { id: 'PANTALLAS', label: 'Pantallas' },
   { id: 'TAPAS', label: 'Tapas Traseras' },
-  { id: 'PIN DE CARGA', label: 'Pin de Carga' },
+  { id: 'PIN_CARGA', label: 'Pin de Carga' },
   { id: 'PLACA', label: 'Placa' }
 ];
 const ICONS = ["<svg aria-hidden=\"true\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"flex:none;color:#ffffff;\"><path d=\"M3 5h4v4H3zM10 7h11M3 11h4v4H3zM10 13h11M3 17h4v4H3zM10 19h11\"></path></svg>", "<svg aria-hidden=\"true\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"flex:none;color:#4ade80;\"><rect x=\"2\" y=\"7\" width=\"16\" height=\"10\" rx=\"2\"></rect><path d=\"M22 11v2M6 11v2M10 11v2\"></path></svg>", "<svg aria-hidden=\"true\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"flex:none;color:#60a5fa;\"><rect x=\"7\" y=\"2\" width=\"10\" height=\"20\" rx=\"2\"></rect><path d=\"M12 18h.01\"></path></svg>", "<svg aria-hidden=\"true\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"flex:none;color:#c084fc;\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\" fill=\"currentColor\"></rect></svg>", "<svg aria-hidden=\"true\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"flex:none;color:#fbbf24;\"><path d=\"M13 2 4 14h7l-1 8 9-12h-7z\"></path></svg>", "<svg aria-hidden=\"true\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" style=\"flex:none;color:#fb7185;\"><rect x=\"6\" y=\"6\" width=\"12\" height=\"12\" rx=\"1\"></rect><path d=\"M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3\"></path></svg>"];
